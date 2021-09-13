@@ -1,0 +1,16 @@
+{% extends 'books/home.html'%}
+
+{%block content%}
+
+<h4>
+    Book Detail
+
+    {{ one_book }}
+
+    <h2> {{one_book.title}} </h2>
+
+    <p>Rent Price: {{one_book.rentPrice}} </p>
+
+    <a href="/books/rent/{{one_book.id}}">Rent This Book</a>
+</h4>
+{%endblock%}

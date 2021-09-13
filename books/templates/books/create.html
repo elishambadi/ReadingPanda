@@ -1,0 +1,28 @@
+{% extends 'books/home.html'%}
+
+{%block content%}
+
+<h4>Add a book</h4>
+
+<!-- Model Form -->
+
+<form method="POST"> {%csrf_token%}
+    {{ form.as_p }}
+    <input type="submit" value="SUBMIT BOOK">
+</form>
+
+<!-- Raw Form -->
+
+<!-- <form method = "POST"> {% csrf_token %}
+    
+    Book Title: <input type="text" name="book-title" id="book-title"> 
+    ISBN: <input type="text" name="book-isbn" id="book-isbn">
+    Category: <input type="text" name="book-cat" id="book-cat">
+    Number of books: <input type="number" name="book-count" id="book-count">
+    Rent Price: <input type="number" name="book-rent" id="book-rent">
+    <p>Note: Books average rent is Ksh. 100 per week</p>
+
+    <input type="submit" name="submit" id="submit" value="SUBMIT BOOK">
+</form> -->
+
+{%endblock%}

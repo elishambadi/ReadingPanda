@@ -1,0 +1,17 @@
+{% extends 'books/home.html'%}
+
+{%block content%}
+
+<h4>
+    Books List
+
+    All books down here
+
+    {{ all_books }}
+
+    <p>Book ID - Book Title - Book Category - Stock - Rent Price</p>
+    {% for book in books %}
+<p> <a href="books/{{book.id}}">{{book.id}} - {{ book.title }} - {{book.category}} - {{book.count}} - {{book.rentPrice}} </a> </p>
+    {% endfor %}
+</h4>
+{%endblock%}
